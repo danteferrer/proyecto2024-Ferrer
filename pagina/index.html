@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Proyecto Agencia de Viaje</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="header">
-    <img src="imagenes/logo.png" alt="Logo">
+    <img src="imagenes/logo.png" alt="logo">
     <nav>
-        <a href="#home" onclick="showSection('home')">Inicio</a>
-        <a href="#categories" onclick="showSection('categories')">Categorías</a>
-        <a href="#signup" onclick="showSection('signup')">Regístrate</a>
+        <a href="#home">inicio</a>
+        <a href="#categories">categorías</a>
+        <a href="#signup">regístrate</a>
     </nav>
 </header>
 <section id="home" class="section active">
     <div class="main">
-        <h1>Organiza tu viaje y descubre el mundo</h1>
-        <p>Organiza un viaje personalizado a tu presupuesto y preferencias</p>
-        <button onclick="showSection('categories')">Planifica tu viaje</button>
+        <h1>organiza tu viaje y descubre el mundo</h1>
+        <p>organiza un viaje personalizado a tu presupuesto y preferencias</p>
+        <button onclick="showSection('categories')">planifica tu viaje</button>
     </div>
 </section>
 <section id="categories" class="section">
     <div class="categories">
-        <h2>Categorías</h2>
-        <label for="clima">¿Qué clima estás buscando?</label>
+        <h2>categorías</h2>
+        <label for="clima">¿qué clima estás buscando?</label>
         <select id="clima">
-            <option value="tropical">Tropical</option>
-            <option value="templado">Templado</option>
-            <option value="frío">Frío</option>
+            <option value="tropical">tropical</option>
+            <option value="templado">templado</option>
+            <option value="frío">frío</option>
         </select>
 
-        <label>¿Buscas un viaje nacional o internacional?</label>
+        <label>¿buscas un viaje nacional o internacional?</label>
         <div class="radio-group">
             <div>
                 <input type="radio" id="nacional" name="tipo_viaje" value="nacional" checked>
-                <label for="nacional">Nacional</label>
+                <label for="nacional">nacional</label>
             </div>
             <div>
                 <input type="radio" id="internacional" name="tipo_viaje" value="internacional">
-                <label for="internacional">Internacional</label>
+                <label for="internacional">internacional</label>
             </div>
         </div>
 
-        <label for="presupuesto">¿Con qué presupuesto estamos trabajando?</label>
+        <label for="presupuesto">¿con qué presupuesto estamos trabajando?</label>
         <div class="range-labels">
-            <span>200 U$D</span>
-            <span>10000 U$D</span>
+            <span>200 u$d</span>
+            <span>10000 u$d</span>
         </div>
         <input type="range" id="presupuesto" name="presupuesto" min="200" max="10000" step="100">
 
-        <label for="viajeros">¿Con cuántos amigos/familia vas a viajar?</label>
+        <label for="viajeros">¿con cuántos amigos/familia vas a viajar?</label>
         <input type="number" id="viajeros" name="viajeros" min="1" max="20" value="1">
 
-        <label for="busqueda">¿Qué buscas de este viaje?</label>
+        <label for="busqueda">¿qué buscas de este viaje?</label>
         <input type="text" id="busqueda" name="busqueda" placeholder="ej: aventura, relajarte...">
 
-        <button type="button" onclick="showSection('results')">Buscar Viaje</button>
+        <button onclick="showSection('results')">buscar viaje</button>
     </div>
 </section>
 <section id="results" class="section">
     <div class="results">
-        <img src="imagenes/resultado.png" alt="Lugar">
+        <img src="imagenes/resultado.png" alt="lugar">
         <div class="description">
-            <h3>Lugar que le eligio</h3>
-            <p>Aca va una breve descripción del lugar que le ha elegido y las actividades que puede realizar más precio y otras informaciones importantes.</p>
+            <h3>lugar que le eligio</h3>
+            <p>aca va una breve descripción del lugar que le ha elegido y las actividades que puede realizar más precio y otras informaciones importantes.</p>
         </div>
         <div class="buttons">
-            <button onclick="showSection('categories')">Repetir búsqueda</button>
-            <button>Aceptar viaje</button>
+            <button onclick="showSection('categories')">repetir búsqueda</button>
+            <button>aceptar viaje</button>
         </div>
     </div>
 </section>
 <section id="signup" class="section">
     <div class="signup">
-        <h2>Regístrate</h2>
+        <h2>regístrate</h2>
         <label>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo electrónico">
-            <input type="password" placeholder="Contraseña">
+            <input type="text" placeholder="nombre">
+            <input type="email" placeholder="correo electrónico">
+            <input type="password" placeholder="contraseña">
         </label>
-        <button>Registrarse</button>
+        <button>registrarse</button>
     </div>
 </section>
 <script>
