@@ -9,94 +9,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-    <img src="imagenes/logo.png" alt="logo">
+<div class="header">
+    <img src="imagenes/logo.png" alt="Logo de la agencia de viaje">
     <nav>
-        <a href="#home">inicio</a>
-        <a href="#categories">categorías</a>
-        <a href="#signup">regístrate</a>
+        <a href="index.html">inicio</a>
+        <a href="categorias.html" >categorías</a>
+        <a href="singup.html">registrarte</a>
     </nav>
-</header>
+</div>
 <section id="home" class="section active">
     <div class="main">
         <h1>organiza tu viaje y descubre el mundo</h1>
         <p>organiza un viaje personalizado a tu presupuesto y preferencias</p>
-        <button onclick="showSection('categories')">planifica tu viaje</button>
+        <a href="categorias.html" >
+        <button >planifica tu viaje</button>
+        </a>
     </div>
 </section>
-<section id="categories" class="section">
-    <div class="categories">
-        <h2>categorías</h2>
-        <label for="clima">¿qué clima estás buscando?</label>
-        <select id="clima">
-            <option value="tropical">tropical</option>
-            <option value="templado">templado</option>
-            <option value="frío">frío</option>
-        </select>
 
-        <label>¿buscas un viaje nacional o internacional?</label>
-        <div class="radio-group">
-            <div>
-                <input type="radio" id="nacional" name="tipo_viaje" value="nacional" checked>
-                <label for="nacional">nacional</label>
-            </div>
-            <div>
-                <input type="radio" id="internacional" name="tipo_viaje" value="internacional">
-                <label for="internacional">internacional</label>
-            </div>
-        </div>
-
-        <label for="presupuesto">¿con qué presupuesto estamos trabajando?</label>
-        <div class="range-labels">
-            <span>200 u$d</span>
-            <span>10000 u$d</span>
-        </div>
-        <input type="range" id="presupuesto" name="presupuesto" min="200" max="10000" step="100">
-
-        <label for="viajeros">¿con cuántos amigos/familia vas a viajar?</label>
-        <input type="number" id="viajeros" name="viajeros" min="1" max="20" value="1">
-
-        <label for="busqueda">¿qué buscas de este viaje?</label>
-        <input type="text" id="busqueda" name="busqueda" placeholder="ej: aventura, relajarte...">
-
-        <button onclick="showSection('results')">buscar viaje</button>
-    </div>
+<section id="canvas-section" class="section">
+    <canvas id="myCanvas" width="400" height="400"></canvas>
 </section>
-<section id="results" class="section">
-    <div class="results">
-        <img src="imagenes/resultado.png" alt="lugar">
-        <div class="description">
-            <h3>lugar que le eligio</h3>
-            <p>aca va una breve descripción del lugar que le ha elegido y las actividades que puede realizar más precio y otras informaciones importantes.</p>
-        </div>
-        <div class="buttons">
-            <button onclick="showSection('categories')">repetir búsqueda</button>
-            <button>aceptar viaje</button>
-        </div>
-    </div>
-</section>
-<section id="signup" class="section">
-    <div class="signup">
-        <h2>regístrate</h2>
-        <label>
-            <input type="text" placeholder="nombre">
-            <input type="email" placeholder="correo electrónico">
-            <input type="password" placeholder="contraseña">
-        </label>
-        <button>registrarse</button>
-    </div>
-</section>
-<script>
-    function showSection(sectionId) {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            if (section.id === sectionId) {
-                section.classList.add('active');
-            } else {
-                section.classList.remove('active');
-            }
-        });
-    }
-</script>
+<footer class="footer">
+    <p>proyecto pagina web laboratorio de computos 2</p>
+</footer>
 </body>
 </html>
